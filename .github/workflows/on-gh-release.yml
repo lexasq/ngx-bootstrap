@@ -1,7 +1,9 @@
 name: on-gh-release
 on:
   release:
-    types: [released]
+    types: 
+      - released
+      - published
 
 jobs:
   # one run

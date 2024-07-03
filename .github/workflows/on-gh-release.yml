@@ -1,14 +1,7 @@
 name: on-gh-release
 on:
   release:
-    types: [published]
-
-env:
-  NX_BRANCH: ${{ github.event.number }}
-  NX_RUN_GROUP: ${{ github.run_id }}
-  NX_CLOUD_AUTH_TOKEN: ${{ secrets.NX_CLOUD_AUTH_TOKEN }}
-  MOZ_HEADLESS: 1
-  CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    types: [released]
 
 jobs:
   # one run
@@ -18,7 +11,7 @@ jobs:
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.11.0
         with:
-          access_token: ${{ secrets.GITHUB_TOKEN }}
+          access_token: 'asd'
 
   # update npm tags
   npm_tag_update:
@@ -31,5 +24,5 @@ jobs:
         uses: martinbeentjes/npm-get-version-action@v1.3.1
       - run: |
           npm config set registry https://registry.npmjs.org/
-          npm config set _authToken=${{ secrets.NPM_TOKEN }}
+          npm config set _authToken=token
           npm dist-tag add ngx-bootstrap@${{ steps.package-version.outputs.current-version}} latest

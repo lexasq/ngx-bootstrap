@@ -7,15 +7,6 @@ on:
       - development
 
 jobs:
-  # one run
-  one_run:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.11.0
-        with:
-          access_token: 'asd'
-
   # update npm tags
   npm_tag_update:
     runs-on: ubuntu-latest

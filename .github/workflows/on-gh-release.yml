@@ -1,9 +1,7 @@
 name: on-gh-release
 on:
-  release:
-    types: 
-      - released
-      - published
+  registry_package:
+    types: [released]
 
 jobs:
   # one run

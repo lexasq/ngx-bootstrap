@@ -1,14 +1,9 @@
 name: on-gh-release
 on:
   release:
-    types: 
-      - published
-      - unpublished
-      - created
-      - edited
-      - deleted
-      - prereleased
-      - released
+    types: [published, unpublished, created, edited, deleted, prereleased, released]
+    branches:
+      - development
 
 jobs:
   # one run

@@ -2,9 +2,13 @@ name: on-gh-release
 on:
   release:
     types: 
-      - created
-      - released
       - published
+      - unpublished
+      - created
+      - edited
+      - deleted
+      - prereleased
+      - released
 
 jobs:
   # one run

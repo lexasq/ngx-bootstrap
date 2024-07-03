@@ -2,6 +2,7 @@ name: on-gh-release
 on:
   release:
     types: 
+      - created
       - released
       - published
 

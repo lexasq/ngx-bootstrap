@@ -1,6 +1,7 @@
 name: on-gh-release
 on:
-  registry_package:
+  workflow_dispatch:
+  release:
     types: [released]
 
 jobs:

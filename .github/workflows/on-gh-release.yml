@@ -1,7 +1,8 @@
 name: on-gh-release
+
 on:
   release:
-    types: [published, unpublished, created, edited, deleted, prereleased, released]
+    types: [published]
     branches:
       - development
 

@@ -1,8 +1,9 @@
 name: on-gh-release
 on:
-  workflow_dispatch:
   release:
-    types: [released]
+    types: 
+      - released
+      - published
 
 jobs:
   # one run
